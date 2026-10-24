@@ -1,0 +1,69 @@
+{
+  "nota": "Chromium sin interfaz controlado por CDP (el mismo protocolo que usa DevTools). API simulada con page.route(); solo se mide el comportamiento del front-end.",
+  "antes": {
+    "version": "antes",
+    "consola": [
+      "error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "peticiones": [
+      "GET /incidentes",
+      "GET /incidentes?q=ran",
+      "GET /incidentes?q=ransomware",
+      "GET /incidentes?q=%22%3E%3Cimg+src%3Dx+onerror%3D%22window.__xss%3D1%22%3E",
+      "GET /incidentes?q=%22%3E%3Cimg+src%3Dx+onerror%3D%22window.__xss%3D1%22%3E"
+    ],
+    "contador": "50",
+    "tarjetas": 50,
+    "hayPaginacion": false,
+    "botonesEnTarjeta": [
+      "estado",
+      "editar",
+      "eliminar"
+    ],
+    "busquedaEscrita": "ransomware",
+    "busquedaMuestra": "#1 Resultado de la búsqueda \"ran\" #1",
+    "busquedaContador": "7",
+    "tarjetasTrasSalir": 0,
+    "xssEjecutado": true,
+    "imgInyectadaEnFiltros": 1,
+    "filtroTrasReingresar": ""
+  },
+  "despues": {
+    "version": "despues",
+    "consola": [],
+    "peticiones": [
+      "GET /incidentes?pagina=1",
+      "GET /incidentes?q=ran&pagina=1",
+      "GET /incidentes?q=ransomware&pagina=1",
+      "GET /incidentes?q=%22%3E%3Cimg+src%3Dx+onerror%3D%22window.__xss%3D1%22%3E&pagina=1",
+      "GET /incidentes?pagina=1"
+    ],
+    "contador": "155",
+    "tarjetas": 50,
+    "hayPaginacion": true,
+    "botonesEnTarjeta": [],
+    "busquedaEscrita": "ransomware",
+    "busquedaMuestra": "#1 Resultado de la búsqueda \"ransomware\" #1",
+    "busquedaContador": "2",
+    "tarjetasTrasSalir": 0,
+    "xssEjecutado": false,
+    "imgInyectadaEnFiltros": 0,
+    "filtroTrasReingresar": ""
+  },
+  "urlDeLaApi": {
+    "antes": {
+      "puertoDelFront": 8101,
+      "primeraPeticionApi": "http://localhost:3000/api/health",
+      "fallos": [
+        "http://localhost:3000/api/health -> net::ERR_CONNECTION_REFUSED"
+      ],
+      "estadoDelIndicador": "● API sin conexión"
+    },
+    "despues": {
+      "puertoDelFront": 8102,
+      "primeraPeticionApi": "http://127.0.0.1:8102/api/health",
+      "fallos": [],
+      "estadoDelIndicador": "● API sin conexión"
+    }
+  }
+}

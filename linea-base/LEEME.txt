@@ -1,0 +1,11 @@
+LÍNEA BASE (versión "antes" del Reto 3 - Unidad 7)
+
+Copia del código tal como estaba al recibir el reto (sin las correcciones ni optimizaciones),
+más el logotipo original (logo.png) en la cabecera. Sirve para medir el "antes" con EXACTAMENTE
+el mismo procedimiento que el "después":
+
+    npm run medir:antes       -> docs/reportes/medicion-antes.txt / .json
+    npm run medir:despues     -> docs/reportes/medicion-despues.txt / .json
+
+No se instala nada aparte: Node busca las dependencias en ../node_modules.
+No se ejecuta nunca como aplicación; no es parte de la entrega funcional.

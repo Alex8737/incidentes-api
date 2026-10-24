@@ -1,0 +1,7 @@
+ANÁLISIS ESTÁTICO (ESLint) — DESPUÉS
+Comando: npx eslint . --format stylish
+ESLint v10.1.0 · Node v22.22.0 · 2026-10-15 20:46
+Código analizado: versión final entregada
+======================================================================
+
+(sin hallazgos: 0 errores, 0 avisos)

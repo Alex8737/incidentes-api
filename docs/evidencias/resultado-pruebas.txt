@@ -1,0 +1,82 @@
+[2026-10-03T13:49:46.072Z] GET    /api/health [32m200[0m - 3.45 ms
+▶ Casos correctos
+  ✔ GET /api/health confirma conexión con la base (26.8395ms)
+[2026-10-03T13:49:46.086Z] POST   /api/incidentes [32m201[0m - 7.72 ms
+  ✔ POST crea y PERSISTE el incidente en la base (201 + Location) (15.3576ms)
+[2026-10-03T13:49:46.095Z] GET    /api/incidentes [32m200[0m - 2.56 ms
+  ✔ GET /api/incidentes lista con total y paginación (5.4693ms)
+[2026-10-03T13:49:46.100Z] GET    /api/incidentes?estado=abierto [32m200[0m - 1.37 ms
+  ✔ filtra por estado (5.0023ms)
+[2026-10-03T13:49:46.104Z] GET    /api/incidentes?prioridad=alta [32m200[0m - 1.22 ms
+  ✔ filtra por prioridad (4.2082ms)
+[2026-10-03T13:49:46.108Z] GET    /api/incidentes?estado=abierto&prioridad=alta [32m200[0m - 1.17 ms
+  ✔ combina estado + prioridad (3.7547ms)
+[2026-10-03T13:49:46.113Z] GET    /api/incidentes?q=vpn [32m200[0m - 1.74 ms
+[2026-10-03T13:49:46.116Z] GET    /api/incidentes?q=%27%20OR%201%3D1%20-- [32m200[0m - 1.29 ms
+  ✔ busca por texto (q) con consulta parametrizada (7.9788ms)
+[2026-10-03T13:49:46.120Z] GET    /api/incidentes?orden=prioridad&dir=desc&limite=2&pagina=1 [32m200[0m - 1.17 ms
+  ✔ pagina y ordena por prioridad (orden lógico, no alfabético) (3.7871ms)
+[2026-10-03T13:49:46.124Z] GET    /api/incidentes/34 [32m200[0m - 0.98 ms
+  ✔ GET /:id obtiene un incidente (4.1434ms)
+[2026-10-03T13:49:46.130Z] PUT    /api/incidentes/38 [32m200[0m - 2.8 ms
+  ✔ PUT reemplaza el incidente completo y lo guarda (6.3882ms)
+[2026-10-03T13:49:46.169Z] PATCH  /api/incidentes/42 [32m200[0m - 5.32 ms
+  ✔ PATCH actualiza solo el estado y la fecha de actualización (40.0483ms)
+[2026-10-03T13:49:46.176Z] DELETE /api/incidentes/46 [32m204[0m - 0.81 ms
+[2026-10-03T13:49:46.179Z] GET    /api/incidentes/46 [33m404[0m - 1.12 ms
+  ✔ DELETE elimina de la base (204) y luego responde 404 (7.7437ms)
+[2026-10-03T13:49:46.183Z] GET    /api/incidentes/stats [32m200[0m - 1.67 ms
+  ✔ GET /stats calcula totales con GROUP BY (4.0436ms)
+[2026-10-03T13:49:46.186Z] GET    /api/incidentes/catalogos [32m200[0m - 0.34 ms
+  ✔ GET /catalogos incluye prioridades (3.7342ms)
+✔ Casos correctos (144.8228ms)
+[2026-10-03T13:49:46.190Z] POST   /api/incidentes [33m400[0m - 0.42 ms
+▶ Casos de error y validaciones
+  ✔ 400 si el body tiene campos inválidos (con detalle por campo) (3.9688ms)
+[2026-10-03T13:49:46.194Z] POST   /api/incidentes [33m400[0m - 0.35 ms
+  ✔ 400 si se intenta asignar campos no permitidos (id, fechas) (2.7405ms)
+[2026-10-03T13:49:46.197Z] POST   /api/incidentes [33m400[0m - 0.6 ms
+  ✔ 400 si el JSON está mal formado (3.0834ms)
+[2026-10-03T13:49:46.200Z] POST   /api/incidentes [33m413[0m - 0.71 ms
+  ✔ 413 si el cuerpo supera 10 KB (3.2351ms)
+[2026-10-03T13:49:46.203Z] GET    /api/incidentes/abc [33m400[0m - 0.32 ms
+[2026-10-03T13:49:46.204Z] DELETE /api/incidentes/-1 [33m400[0m - 0.21 ms
+  ✔ 400 si :id no es numérico (4.0706ms)
+[2026-10-03T13:49:46.207Z] GET    /api/incidentes/999999 [33m404[0m - 0.76 ms
+[2026-10-03T13:49:46.210Z] PUT    /api/incidentes/999999 [33m404[0m - 1.09 ms
+[2026-10-03T13:49:46.214Z] PATCH  /api/incidentes/999999 [33m404[0m - 3.13 ms
+[2026-10-03T13:49:46.216Z] DELETE /api/incidentes/999999 [33m404[0m - 0.5 ms
+  ✔ 404 si el incidente no existe (GET, PUT, PATCH, DELETE) (11.6391ms)
+[2026-10-03T13:49:46.219Z] PATCH  /api/incidentes/82 [33m400[0m - 0.32 ms
+  ✔ 400 si PATCH llega vacío (3.4169ms)
+[2026-10-03T13:49:46.222Z] GET    /api/incidentes?estado=borrado [33m400[0m - 0.32 ms
+[2026-10-03T13:49:46.224Z] GET    /api/incidentes?prioridad=maxima [33m400[0m - 0.34 ms
+[2026-10-03T13:49:46.225Z] GET    /api/incidentes?limite=1000 [33m400[0m - 0.27 ms
+[2026-10-03T13:49:46.227Z] GET    /api/incidentes?orden=password [33m400[0m - 0.27 ms
+[2026-10-03T13:49:46.228Z] GET    /api/incidentes?usuario=admin [33m400[0m - 0.23 ms
+  ✔ 400 si un filtro tiene un valor fuera de catálogo o no soportado (8.6269ms)
+[2026-10-03T13:49:46.230Z] GET    /api/no-existe [33m404[0m - 0.3 ms
+  ✔ 404 para rutas /api inexistentes (2.381ms)
+  ✔ el MODELO rechaza datos inválidos aunque se salte el middleware (2ª capa) (1.5113ms)
+[2026-10-03T13:49:46.235Z] POST   /api/incidentes [33m400[0m - 0.55 ms
+  ✔ el errorHandler traduce errores de validación del ORM a 400 (2.6474ms)
+[2026-10-03T13:49:46.237Z] GET    /api/incidentes [31m503[0m - 0.53 ms
+  ✔ 503 si la base no está disponible, SIN exponer detalles internos (2.6193ms)
+[2026-10-03T13:49:46.240Z] GET    /api/incidentes/1 [31m500[0m - 0.32 ms
+  ✔ 500 genérico ante una excepción no controlada, sin stack ni mensaje interno (2.2891ms)
+[2026-10-03T13:49:46.242Z] GET    /api/health [32m200[0m - 0.42 ms
+  ✔ envía cabeceras de seguridad y no revela la tecnología (2.4467ms)
+✔ Casos de error y validaciones (55.3413ms)
+▶ Migraciones y esquema
+  ✔ crea la tabla incidentes con todas las columnas (2.4332ms)
+  ✔ crea los índices para filtros por estado y prioridad (1.0239ms)
+  ✔ las migraciones son reversibles (down) y se pueden volver a aplicar (up) (5.6496ms)
+✔ Migraciones y esquema (20.0534ms)
+ℹ tests 31
+ℹ suites 3
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 507.7324

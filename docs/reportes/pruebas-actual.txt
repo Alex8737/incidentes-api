@@ -1,0 +1,1289 @@
+PRUEBAS AUTOMATIZADAS (Jest)
+Comando: npx jest --coverage --colors=false
+Fecha: 24/10/2026, 4:23:59 p. m. · Node v24.21.0
+Resultado: SIN ERRORES
+======================================================================
+  console.log
+    [2026-10-24T21:23:56.584Z] INFO  solicitud {"requestId":"1090f462-5a24-4fe5-861b-79b65ac9905b","metodo":"POST","url":"/api/auth/login","estado":200,"duracionMs":35.67,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.611Z] INFO  solicitud {"requestId":"ed13d393-93f3-4fba-a44b-8303ce218a9e","metodo":"GET","url":"/api/health","estado":200,"duracionMs":17.48,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.619Z] INFO  solicitud {"requestId":"fae4538e-1565-4d51-918d-ad42daea1ffc","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":45.46,"ip":"127.0.0.1","usuarioId":1,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:56.656Z] WARN  solicitud {"requestId":"1c3120c9-315c-41cb-87e7-deda42b77696","metodo":"POST","url":"/api/auth/login","estado":401,"duracionMs":5.5,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:56.629Z] INFO  solicitud {"requestId":"96748cda-8e65-4920-bbb2-84dd5cefb6b3","metodo":"GET","url":"/api/health","estado":200,"duracionMs":14.76,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.677Z] INFO  solicitud {"requestId":"efdceac6-37ac-4e73-9ab9-78f6f0a57c7b","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":8.93,"ip":"127.0.0.1","usuarioId":1,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.705Z] INFO  solicitud {"requestId":"712a1646-ec15-473f-9c4f-5cb962cab891","metodo":"GET","url":"/api/health","estado":200,"duracionMs":1.84,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.711Z] INFO  solicitud {"requestId":"3bd00009-12c2-42dc-808d-e5b406dc1819","metodo":"GET","url":"/api/auth/me","estado":200,"duracionMs":5.99,"ip":"127.0.0.1","usuarioId":4,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.729Z] INFO  solicitud {"requestId":"5d01d35e-e457-4ae7-9470-bbc632b586bb","metodo":"GET","url":"/api/health","estado":200,"duracionMs":1.45,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.733Z] INFO  solicitud {"requestId":"25387b12-80eb-485f-b9cf-9008f48bc2f0","metodo":"POST","url":"/api/incidentes","estado":201,"duracionMs":31.79,"ip":"127.0.0.1","usuarioId":4,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.738Z] INFO  solicitud {"requestId":"7c55ee7d-9b76-4966-b3dc-82a976db43a0","metodo":"GET","url":"/api/health","estado":200,"duracionMs":2.53,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.741Z] INFO  solicitud {"requestId":"da7a4e20-7d0c-4353-baff-22feb362e555","metodo":"GET","url":"/api/auth/me","estado":200,"duracionMs":4.21,"ip":"127.0.0.1","usuarioId":8,"rol":"analista"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:56.757Z] WARN  solicitud {"requestId":"39e8c90f-0318-4f80-9672-d2e2ed3ec5aa","metodo":"POST","url":"/api/auth/login","estado":401,"duracionMs":72.43,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:56.763Z] INFO  solicitud {"requestId":"traza-cliente-12345","metodo":"GET","url":"/api/health","estado":200,"duracionMs":1.8,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.766Z] INFO  solicitud {"requestId":"904cc2aa-b598-46cf-b23f-e45d472ea2d3","metodo":"GET","url":"/api/auth/me","estado":200,"duracionMs":4.42,"ip":"127.0.0.1","usuarioId":12,"rol":"visor"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.778Z] INFO  solicitud {"requestId":"e3827624-8918-4fe3-8b82-b49002603256","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":16.93,"ip":"127.0.0.1","usuarioId":7,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.785Z] INFO  solicitud {"requestId":"92a59a10-2f28-4bae-af63-16f325197b86","metodo":"GET","url":"/api/health","estado":200,"duracionMs":2.06,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.792Z] INFO  solicitud {"requestId":"1339addf-225a-44f4-92cf-79cba93e07de","metodo":"GET","url":"/api/health","estado":200,"duracionMs":1.76,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:56.801Z] WARN  solicitud {"requestId":"2c8a4887-1d89-4ede-a55f-b330a51915af","metodo":"GET","url":"/api/incidentes","estado":401,"duracionMs":2.79,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:56.811Z] WARN  solicitud {"requestId":"ec6ab756-72ec-4469-85da-d1ebd6bfff67","metodo":"POST","url":"/api/incidentes","estado":401,"duracionMs":2.5,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:56.812Z] INFO  solicitud {"requestId":"38cc9dba-91ef-4c3a-8aba-3ad8d045b047","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":7.02,"ip":"127.0.0.1","usuarioId":10,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.815Z] INFO  solicitud {"requestId":"e191a252-314e-4858-ae1e-8e6100572b2b","metodo":"POST","url":"/api/auth/login","estado":200,"duracionMs":27.34,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.error
+    [2026-10-24T21:23:56.828Z] ERROR solicitud {"requestId":"b704d27b-046a-4208-935c-7ee3337b6c15","metodo":"GET","url":"/api/incidentes/1","estado":500,"duracionMs":13.03,"ip":"127.0.0.1","usuarioId":19,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as error] (src/utils/log.js:38:31)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:56.840Z] WARN  solicitud {"requestId":"01a66aa7-d5c6-4777-9034-fffc11ca1d57","metodo":"GET","url":"/api/incidentes","estado":401,"duracionMs":3.23,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:56.845Z] INFO  solicitud {"requestId":"8ef46f4d-50c6-423c-8d16-b6e6f4aa0d89","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":8.51,"ip":"127.0.0.1","usuarioId":13,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.852Z] INFO  solicitud {"requestId":"ca7802b3-42b9-460a-bd47-adba7ff2aa72","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":9.38,"ip":"127.0.0.1","usuarioId":16,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:56.851Z] WARN  solicitud {"requestId":"5fb8ccdf-3e3d-4403-83ad-7acdd64d4241","metodo":"GET","url":"/api/incidentes","estado":401,"duracionMs":1.69,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:56.876Z] INFO  solicitud {"requestId":"8a9a95c1-72bb-4e34-99a4-de414ff08d79","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":6.68,"ip":"127.0.0.1","usuarioId":16,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:56.877Z] WARN  solicitud {"requestId":"fd78093f-1800-404b-937a-5256d25f87b3","metodo":"GET","url":"/api/incidentes","estado":401,"duracionMs":2.18,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:56.882Z] INFO  solicitud {"requestId":"9e628f0d-388e-4be2-b9b6-3491b875d4e5","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":7.28,"ip":"127.0.0.1","usuarioId":19,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.884Z] INFO  solicitud {"requestId":"af37e388-b068-4a8f-83d1-17ffd2e819df","metodo":"POST","url":"/api/auth/login","estado":200,"duracionMs":25.58,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.906Z] INFO  solicitud {"requestId":"387332ae-19e2-49bc-9251-48e024e04814","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":8.25,"ip":"127.0.0.1","usuarioId":19,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.906Z] INFO  solicitud {"requestId":"d1fbc5f0-9629-4963-b3cb-b3705b28b1dd","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":14.95,"ip":"127.0.0.1","usuarioId":22,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:56.912Z] WARN  solicitud {"requestId":"c18783b0-0cbd-44de-bb47-a1833f5eeb88","metodo":"GET","url":"/api/incidentes","estado":401,"duracionMs":8.97,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:56.915Z] INFO  solicitud {"requestId":"9d0d1971-2b4f-4221-809c-94ad6f322de1","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":6.14,"ip":"127.0.0.1","usuarioId":22,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.919Z] INFO  solicitud {"requestId":"05403491-3a23-43f1-8d00-b770d8d2c592","metodo":"GET","url":"/api/logs","estado":200,"duracionMs":6.75,"ip":"127.0.0.1","usuarioId":22,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.919Z] INFO  solicitud {"requestId":"3363a532-86e5-4c19-b13e-6fcaf67275e7","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":6.98,"ip":"127.0.0.1","usuarioId":19,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.938Z] INFO  solicitud {"requestId":"8bac3427-b40b-4199-a715-8bf62d0f96f9","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":5.66,"ip":"127.0.0.1","usuarioId":22,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.951Z] INFO  solicitud {"requestId":"603f8f56-b74d-47c8-9fe2-5dbbec2b6dcb","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":5.66,"ip":"127.0.0.1","usuarioId":22,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.956Z] INFO  solicitud {"requestId":"e26f9e87-a5de-4861-9135-b5983ec03739","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":8.5,"ip":"127.0.0.1","usuarioId":26,"rol":"analista"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.958Z] INFO  solicitud {"requestId":"8fb44eec-5a39-4178-a280-8a88e3c6f5ef","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":20.05,"ip":"127.0.0.1","usuarioId":27,"rol":"visor"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.957Z] INFO  solicitud {"requestId":"8465b919-53eb-4c6f-aa6b-ac9525d2a8ba","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":8.23,"ip":"127.0.0.1","usuarioId":22,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.967Z] INFO  solicitud {"requestId":"6ef81e76-ada4-43ee-beb7-b499ada38e6e","metodo":"GET","url":"/api/logs","estado":200,"duracionMs":4.35,"ip":"127.0.0.1","usuarioId":25,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:56.972Z] WARN  solicitud {"requestId":"6a693912-6dbf-49b9-b542-d52edead6399","metodo":"POST","url":"/api/incidentes","estado":403,"duracionMs":5.84,"ip":"127.0.0.1","usuarioId":27,"rol":"visor"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:56.988Z] INFO  solicitud {"requestId":"ee92b8de-ca5d-4b7f-8d33-57c64c6a7320","metodo":"GET","url":"/api/incidentes","estado":200,"duracionMs":7.13,"ip":"127.0.0.1","usuarioId":25,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.996Z] INFO  solicitud {"requestId":"2e7d0d22-a49f-46a1-9e8d-acb224a45309","metodo":"GET","url":"/api/health","estado":200,"duracionMs":1.68,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:56.999Z] INFO  solicitud {"requestId":"e106447d-3920-420e-a319-951c890965d7","metodo":"GET","url":"/api/incidentes/34","estado":200,"duracionMs":6.54,"ip":"127.0.0.1","usuarioId":25,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:57.005Z] INFO  solicitud {"requestId":"ce4821e9-8693-4567-ae54-2208d3a508c9","metodo":"POST","url":"/api/incidentes","estado":201,"duracionMs":7.88,"ip":"127.0.0.1","usuarioId":29,"rol":"analista"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:57.008Z] INFO  solicitud {"requestId":"7a1b0549-99b4-4f60-8b14-c22879abd259","metodo":"GET","url":"/api/metricas","estado":200,"duracionMs":4.95,"ip":"127.0.0.1","usuarioId":28,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:57.018Z] INFO  solicitud {"requestId":"8063cd64-ae98-48ec-a127-e10f63564a11","metodo":"GET","url":"/api/health","estado":200,"duracionMs":6.67,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:57.025Z] INFO  solicitud {"requestId":"cf9a8013-9310-41a8-95c1-98a9b5f1201e","metodo":"PATCH","url":"/api/incidentes/41","estado":200,"duracionMs":14.58,"ip":"127.0.0.1","usuarioId":29,"rol":"analista"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.030Z] WARN  solicitud {"requestId":"27e45d60-3cbd-41c7-b7c7-219877b981b2","metodo":"GET","url":"/api/metricas","estado":401,"duracionMs":1.42,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.035Z] WARN  solicitud {"requestId":"28788eb0-3da6-4ff6-937c-1768e34ad56c","metodo":"DELETE","url":"/api/incidentes/41","estado":403,"duracionMs":3.81,"ip":"127.0.0.1","usuarioId":29,"rol":"analista"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.036Z] INFO  solicitud {"requestId":"a20ddbc4-f73a-4e5a-a944-d11018f2b680","metodo":"PUT","url":"/api/incidentes/38","estado":200,"duracionMs":13.57,"ip":"127.0.0.1","usuarioId":28,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:57.042Z] INFO  solicitud {"requestId":"f5fc87df-f711-4b49-81e3-fd56238c8b44","metodo":"GET","url":"/img/favicon-32.png","estado":200,"duracionMs":4.86,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.043Z] WARN  solicitud {"requestId":"7247e548-88ac-4317-9694-fe9205fe6597","metodo":"GET","url":"/api/metricas","estado":403,"duracionMs":5.45,"ip":"127.0.0.1","usuarioId":32,"rol":"analista"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.052Z] INFO  solicitud {"requestId":"fc6bc37b-0392-4e3e-acff-2e912d84923b","metodo":"GET","url":"/img/logo-80.webp","estado":200,"duracionMs":1.53,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.056Z] WARN  solicitud {"requestId":"755fc5ee-eb87-4ba0-870f-9f30d1547a73","metodo":"GET","url":"/api/metricas","estado":403,"duracionMs":3.69,"ip":"127.0.0.1","usuarioId":33,"rol":"visor"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.069Z] INFO  solicitud {"requestId":"afbdd77e-60a4-4649-adb2-1beb68046e7a","metodo":"DELETE","url":"/api/incidentes/42","estado":204,"duracionMs":4.86,"ip":"127.0.0.1","usuarioId":31,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.078Z] WARN  solicitud {"requestId":"5d151a55-cd61-4522-90d1-f0b4fd02e543","metodo":"GET","url":"/api/logs","estado":403,"duracionMs":4.16,"ip":"127.0.0.1","usuarioId":32,"rol":"analista"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.080Z] INFO  solicitud {"requestId":"a6b70faf-3cdf-4f81-a814-42ff180e71aa","metodo":"GET","url":"/api/incidentes/stats","estado":200,"duracionMs":6.45,"ip":"127.0.0.1","usuarioId":34,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.088Z] WARN  solicitud {"requestId":"9aa07f38-c8a4-4a59-acd5-3d1095ba968c","metodo":"GET","url":"/api/logs","estado":403,"duracionMs":3.88,"ip":"127.0.0.1","usuarioId":33,"rol":"visor"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.099Z] INFO  solicitud {"requestId":"313e6c39-571b-490e-81a2-bec6d6e5969a","metodo":"GET","url":"/api/logs","estado":200,"duracionMs":4.16,"ip":"127.0.0.1","usuarioId":31,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:57.102Z] INFO  solicitud {"requestId":"c1991d30-380e-44fe-9c51-85a14d25c9e3","metodo":"PATCH","url":"/api/incidentes/42","estado":200,"duracionMs":8.06,"ip":"127.0.0.1","usuarioId":31,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.128Z] WARN  solicitud {"requestId":"a6f3471e-0f89-4a23-b50a-a2cf8f30d234","metodo":"PATCH","url":"/api/incidentes/46","estado":403,"duracionMs":5.09,"ip":"127.0.0.1","usuarioId":36,"rol":"visor"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.133Z] INFO  solicitud {"requestId":"d0c5aa56-04c9-410f-afc5-8c71478b908f","metodo":"DELETE","url":"/api/incidentes/46","estado":204,"duracionMs":6,"ip":"127.0.0.1","usuarioId":34,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.138Z] WARN  solicitud {"requestId":"0f67e5c8-af0c-4c99-bb28-cc50d0f4d624","metodo":"PUT","url":"/api/incidentes/46","estado":403,"duracionMs":3.69,"ip":"127.0.0.1","usuarioId":36,"rol":"visor"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.146Z] WARN  solicitud {"requestId":"9294c436-ad4a-47ce-89ec-e57202480e7a","metodo":"GET","url":"/api/incidentes/46","estado":404,"duracionMs":5.08,"ip":"127.0.0.1","usuarioId":34,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.163Z] WARN  solicitud {"requestId":"8f6ab531-79ca-431e-85c5-8c2d6180322f","metodo":"POST","url":"/api/auth/login","estado":400,"duracionMs":1.47,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.174Z] INFO  solicitud {"requestId":"f0e797f1-dac3-4f40-84ab-1db77163a162","metodo":"GET","url":"/api/incidentes/stats","estado":200,"duracionMs":5.3,"ip":"127.0.0.1","usuarioId":37,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.183Z] WARN  solicitud {"requestId":"aac13e68-6bab-40d1-b530-d3e780702668","metodo":"POST","url":"/api/auth/login","estado":400,"duracionMs":1.16,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.189Z] WARN  solicitud {"requestId":"04f55bab-f60e-4db8-a12b-3ad18cebd755","metodo":"POST","url":"/api/auth/login","estado":400,"duracionMs":0.65,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.199Z] INFO  solicitud {"requestId":"f6cc41bd-ed80-4f35-936b-6fc94ad89bc7","metodo":"GET","url":"/api/incidentes/catalogos","estado":200,"duracionMs":3.65,"ip":"127.0.0.1","usuarioId":40,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:57.215Z] INFO  solicitud {"requestId":"d5d6dec7-1763-4979-a3df-ea0fc69a2b85","metodo":"POST","url":"/api/incidentes","estado":201,"duracionMs":5.85,"ip":"127.0.0.1","usuarioId":55,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.221Z] WARN  solicitud {"requestId":"ab27ed85-b50f-4d5b-ad6f-ecd9cd402944","metodo":"POST","url":"/api/incidentes","estado":400,"duracionMs":3.56,"ip":"127.0.0.1","usuarioId":43,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.225Z] INFO  solicitud {"requestId":"65c7bc83-e324-4c12-8fc2-53e47bb9e54f","metodo":"GET","url":"/api/incidentes/77","estado":200,"duracionMs":4.25,"ip":"127.0.0.1","usuarioId":55,"rol":"admin"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.243Z] WARN  solicitud {"requestId":"45bf8bde-7486-4084-8900-777683239aa9","metodo":"POST","url":"/api/incidentes","estado":400,"duracionMs":3.32,"ip":"127.0.0.1","usuarioId":46,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.260Z] WARN  solicitud {"requestId":"eb05fc2d-dd6e-494e-bf0a-1d4c0ab8dbd4","metodo":"POST","url":"/api/incidentes","estado":400,"duracionMs":1.83,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.272Z] WARN  solicitud {"requestId":"63f6d803-9c69-44cf-8125-2afbeb6b81cb","metodo":"POST","url":"/api/incidentes","estado":413,"duracionMs":1.48,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.280Z] WARN  solicitud {"requestId":"4ab8a381-cb78-439e-b356-49adf2b20a5d","metodo":"POST","url":"/api/auth/login","estado":401,"duracionMs":71.08,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.288Z] WARN  solicitud {"requestId":"ce7321f8-c82f-45fd-8d76-a119f55033dd","metodo":"GET","url":"/api/incidentes/abc","estado":400,"duracionMs":2.06,"ip":"127.0.0.1","usuarioId":55,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.295Z] WARN  solicitud {"requestId":"c0556140-1986-48ca-84d0-fb85f5f2f0c6","metodo":"DELETE","url":"/api/incidentes/-1","estado":400,"duracionMs":2.61,"ip":"127.0.0.1","usuarioId":55,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.300Z] INFO  solicitud {"requestId":"9ffd6b59-b8b2-43d2-8698-bb53adfde250","metodo":"GET","url":"/api/health","estado":200,"duracionMs":3.64,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.log
+    [2026-10-24T21:23:57.305Z] INFO  solicitud {"requestId":"a5d22d76-18df-4246-b012-15036b4e9c28","metodo":"GET","url":"/api/health","estado":200,"duracionMs":1.23,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.313Z] WARN  solicitud {"requestId":"4fdfa76f-1732-46ad-b2ef-41c6d80a9ac2","metodo":"GET","url":"/api/incidentes/999999","estado":404,"duracionMs":2.54,"ip":"127.0.0.1","usuarioId":58,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.321Z] WARN  solicitud {"requestId":"7240e142-ba5c-401a-81f5-790ea0de1c23","metodo":"PUT","url":"/api/incidentes/999999","estado":404,"duracionMs":3.92,"ip":"127.0.0.1","usuarioId":58,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.325Z] WARN  solicitud {"requestId":"8cfb3cee-ea43-4b21-8b1c-ecdbc21f3f33","metodo":"GET","url":"/api/auth/me","estado":401,"duracionMs":1.05,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.330Z] WARN  solicitud {"requestId":"49dd52ae-c315-4b3f-bc6a-d08fbf5fa0e5","metodo":"PATCH","url":"/api/incidentes/999999","estado":404,"duracionMs":4.1,"ip":"127.0.0.1","usuarioId":58,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.332Z] INFO  solicitud {"requestId":"15422ebe-7bb0-442e-89bb-26493f32e5d8","metodo":"GET","url":"/api/auth/me","estado":200,"duracionMs":2.91,"ip":"127.0.0.1","usuarioId":50,"rol":"analista"}
+
+      at salida (src/utils/log.js:32:3)
+
+  console.warn
+    [2026-10-24T21:23:57.337Z] WARN  solicitud {"requestId":"9bb8cde9-d7c8-4f59-8ca3-503a8aa43ad5","metodo":"DELETE","url":"/api/incidentes/999999","estado":404,"duracionMs":2.72,"ip":"127.0.0.1","usuarioId":58,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.357Z] WARN  solicitud {"requestId":"0ad31d13-b36a-479a-8bc2-4290b0e236d2","metodo":"PATCH","url":"/api/incidentes/82","estado":400,"duracionMs":2.75,"ip":"127.0.0.1","usuarioId":61,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.375Z] WARN  solicitud {"requestId":"9d424093-b445-4aae-bbbd-7603d97d3770","metodo":"GET","url":"/api/incidentes","estado":400,"duracionMs":2.74,"ip":"127.0.0.1","usuarioId":64,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.380Z] WARN  solicitud {"requestId":"974f4d70-d0b0-4ebd-b7cd-322e09f1a3ff","metodo":"GET","url":"/api/incidentes","estado":400,"duracionMs":1.83,"ip":"127.0.0.1","usuarioId":64,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.385Z] WARN  solicitud {"requestId":"9eee1d57-8d4e-49df-b756-f2451ad32dd7","metodo":"GET","url":"/api/incidentes","estado":400,"duracionMs":1.94,"ip":"127.0.0.1","usuarioId":64,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.390Z] WARN  solicitud {"requestId":"a76cb715-2588-43cd-8085-30c7c1b3ac56","metodo":"GET","url":"/api/incidentes","estado":400,"duracionMs":2.24,"ip":"127.0.0.1","usuarioId":64,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.396Z] WARN  solicitud {"requestId":"0bf2ca32-9fc2-48b8-88fb-bfb11abdc32a","metodo":"GET","url":"/api/incidentes","estado":400,"duracionMs":1.97,"ip":"127.0.0.1","usuarioId":64,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.412Z] WARN  solicitud {"requestId":"0449c355-291e-4d10-a2ac-ea11a3ce3930","metodo":"GET","url":"/api/no-existe","estado":404,"duracionMs":0.75,"ip":"127.0.0.1"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.warn
+    [2026-10-24T21:23:57.437Z] WARN  solicitud {"requestId":"16ea8c84-509f-4438-8f5e-af6985368e25","metodo":"POST","url":"/api/incidentes","estado":400,"duracionMs":2.46,"ip":"127.0.0.1","usuarioId":73,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as warn] (src/utils/log.js:37:30)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.error
+    [2026-10-24T21:23:57.453Z] ERROR solicitud {"requestId":"e5589aef-8460-40c1-a4fb-4e6b8d78c9b3","metodo":"GET","url":"/api/incidentes","estado":503,"duracionMs":2.53,"ip":"127.0.0.1","usuarioId":76,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as error] (src/utils/log.js:38:31)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.error
+    [2026-10-24T21:23:57.468Z] ERROR solicitud {"requestId":"0d144e24-9a49-4e4d-bc9a-8dee3354caf9","metodo":"GET","url":"/api/incidentes/1","estado":500,"duracionMs":2.14,"ip":"127.0.0.1","usuarioId":79,"rol":"admin"}
+
+      30 |   const { ts, nivel: n, mensaje: m, ...resto } = evento;
+      31 |   const extra = Object.keys(resto).length ? ` ${JSON.stringify(resto)}` : '';
+    > 32 |   salida(`[${ts}] ${n.toUpperCase().padEnd(5)} ${m}${extra}`);
+         |   ^
+      33 | }
+      34 |
+      35 | module.exports = {
+
+      at salida (src/utils/log.js:32:3)
+      at Object.escribir [as error] (src/utils/log.js:38:31)
+      at ServerResponse.<anonymous> (src/middleware/logger.js:74:32)
+
+  console.log
+    [2026-10-24T21:23:57.484Z] INFO  solicitud {"requestId":"c504d516-b373-46de-bc96-ad401628b950","metodo":"GET","url":"/api/health","estado":200,"duracionMs":1.12,"ip":"127.0.0.1"}
+
+      at salida (src/utils/log.js:32:3)
+
+---------------------------|---------|----------|---------|---------|--------------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s        
+---------------------------|---------|----------|---------|---------|--------------------------
+All files                  |   74.36 |    72.07 |   67.98 |   76.06 |                          
+ public/js                 |   10.34 |      9.3 |    4.76 |   11.34 |                          
+  api.js                   |   19.35 |    13.33 |    6.25 |   22.91 | 17,30,33-34,42-74,78-104 
+  app.js                   |       0 |        0 |       0 |       0 | 16-101                   
+ public/js/components      |   71.42 |    69.04 |      75 |   73.33 |                          
+  Filtros.js               |     100 |      100 |     100 |     100 |                          
+  FormIncidente.js         |       0 |        0 |       0 |       0 | 5-6                      
+  IncidenteCard.js         |      75 |    71.42 |      75 |   83.33 | 41                       
+  Paginacion.js            |     100 |      100 |     100 |     100 |                          
+  StatsPanel.js            |     100 |       50 |     100 |     100 | 9                        
+  Toast.js                 |       0 |        0 |       0 |       0 | 4-8                      
+  utils.js                 |     100 |      100 |     100 |     100 |                          
+ public/js/incidentes      |   42.51 |    31.08 |   38.23 |   41.61 |                          
+  controlador.js           |       0 |        0 |       0 |       0 | 7-114                    
+  modelo.js                |   93.61 |       92 |   89.65 |   94.36 | 94-95,126,137            
+  vista.js                 |       0 |        0 |       0 |       0 | 13-60                    
+ src                       |   95.45 |       75 |     100 |   95.45 |                          
+  app.js                   |   95.45 |       75 |     100 |   95.45 | 44-45                    
+ src/config                |   96.05 |    88.54 |     100 |    98.3 |                          
+  database.js              |    87.5 |       30 |     100 |    87.5 | 32                       
+  env.js                   |   97.05 |    95.34 |     100 |     100 | 49-51,135                
+ src/controllers           |     100 |    94.11 |     100 |     100 |                          
+  auth.controller.js       |     100 |      100 |     100 |     100 |                          
+  incidentes.controller.js |     100 |      100 |     100 |     100 |                          
+  salud.controller.js      |     100 |       50 |     100 |     100 | 16                       
+ src/middleware            |   94.35 |    86.13 |      94 |   97.43 |                          
+  auth.js                  |     100 |      100 |     100 |     100 |                          
+  errorHandler.js          |    92.1 |    85.71 |    90.9 |   96.42 | 63                       
+  forzarHttps.js           |     100 |     90.9 |     100 |     100 | 9                        
+  limiteLogin.js           |   95.83 |    93.75 |      80 |     100 | 9                        
+  logger.js                |   93.61 |    72.72 |     100 |     100 | 37-43,70-90              
+  notFound.js              |     100 |      100 |     100 |     100 |                          
+  validarIncidente.js      |   94.44 |    84.61 |     100 |   94.44 | 18                       
+  validarLogin.js          |   84.61 |       75 |     100 |   84.61 | 12-13                    
+ src/models                |     100 |    95.78 |     100 |     100 |                          
+  catalogos.js             |     100 |      100 |     100 |     100 |                          
+  incidente.model.js       |     100 |      100 |     100 |     100 |                          
+  incidente.reglas.js      |     100 |    98.66 |     100 |     100 | 143                      
+  index.js                 |     100 |       50 |     100 |     100 | 7-9                      
+  permisos.js              |     100 |      100 |     100 |     100 |                          
+  usuario.model.js         |     100 |      100 |     100 |     100 |                          
+  usuario.reglas.js        |     100 |    91.66 |     100 |     100 | 12                       
+ src/repositories          |      96 |    84.21 |     100 |     100 |                          
+  incidente.repository.js  |      96 |    84.21 |     100 |     100 | 41-42,48                 
+ src/routes                |     100 |      100 |     100 |     100 |                          
+  auth.routes.js           |     100 |      100 |     100 |     100 |                          
+  incidentes.routes.js     |     100 |      100 |     100 |     100 |                          
+ src/utils                 |   92.59 |    70.58 |     100 |    91.3 |                          
+  AppError.js              |     100 |       50 |     100 |     100 | 3                        
+  asyncHandler.js          |     100 |      100 |     100 |     100 |                          
+  log.js                   |   89.47 |    73.33 |     100 |   88.23 | 27-28                    
+---------------------------|---------|----------|---------|---------|--------------------------
+
+=============================== Coverage summary ===============================
+Statements   : 74.36% ( 731/983 )
+Branches     : 72.07% ( 369/512 )
+Functions    : 67.98% ( 189/278 )
+Lines        : 76.06% ( 626/823 )
+================================================================================
+PASS servidor tests/unit/permisos.test.js
+  puede(rol, accion)
+    √ visor -> leer = true (13 ms)
+    √ visor -> escribir = false (1 ms)
+    √ visor -> eliminar = false (2 ms)
+    √ analista -> leer = true (1 ms)
+    √ analista -> escribir = true (1 ms)
+    √ analista -> eliminar = false
+    √ admin -> leer = true
+    √ admin -> escribir = true
+    √ admin -> eliminar = true
+    √ admin -> verLogs = true (1 ms)
+    √ niega por defecto roles o acciones desconocidas
+  permisosDe(rol)
+    √ lista las acciones de cada rol (2 ms)
+    √ un rol inexistente no tiene permisos
+  rolesPara(accion)
+    √ devuelve los roles autorizados (usado por las rutas) (1 ms)
+    √ falla de inmediato si una ruta usa una acción mal escrita (20 ms)
+    √ devuelve una copia: modificarla no altera las reglas (1 ms)
+
+PASS servidor tests/unit/incidente.reglas.test.js
+  validarIncidente — creación y reemplazo (completo)
+    √ acepta un incidente válido (13 ms)
+    √ acepta solo los obligatorios (título y severidad) (1 ms)
+    √ exige título y severidad
+    √ rechaza un título muy corto (1 ms)
+    √ rechaza un título solo espacios (1 ms)
+    √ rechaza un título no es texto (1 ms)
+    √ rechaza un título demasiado largo
+    √ acepta el título en los límites exactos (5 y 120 caracteres) (1 ms)
+    √ rechaza severidad fuera del catálogo (1 ms)
+    √ rechaza prioridad fuera del catálogo (1 ms)
+    √ rechaza estado fuera del catálogo (1 ms)
+    √ rechaza categoria fuera del catálogo
+    √ respeta los límites de descripción (2000) y reportadoPor (80) (1 ms)
+    √ bloquea la asignación masiva (id, fechas u otros campos)
+    √ acumula todos los errores en una sola respuesta (1 ms)
+  validarIncidente — actualización parcial (PATCH)
+    √ permite enviar solo el estado (1 ms)
+    √ no exige título ni severidad si no se envían
+    √ sí valida los campos que se envían (1 ms)
+  normalizarIncidente y prepararReemplazo
+    √ recorta espacios y no modifica el objeto original (1 ms)
+    √ quita reportadoPor vacío para que el modelo use "Anónimo" (1 ms)
+    √ PUT: los campos opcionales no enviados vuelven a su valor por defecto (1 ms)
+  esIdValido
+    √ acepta 1
+    √ acepta 42
+    √ acepta 2147483647
+    √ rechaza "0" (1 ms)
+    √ rechaza "-1" (1 ms)
+    √ rechaza "abc"
+    √ rechaza "1.5" (1 ms)
+    √ rechaza "2147483648"
+    √ rechaza ""
+    √ rechaza "1e3"
+  validarFiltros
+    √ acepta filtros, paginación y orden válidos (1 ms)
+    √ rechaza filtros no soportados y valores repetidos (?estado=a&estado=b) (1 ms)
+    √ rechaza estado=borrado (1 ms)
+    √ rechaza pagina=0
+    √ rechaza limite=1000
+    √ rechaza orden=password
+    √ rechaza dir=arriba
+    √ rechaza q=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  calcularPaginacion y totalPaginas
+    √ usa página 1 y 50 registros por defecto
+    √ calcula el desplazamiento (offset) de la página pedida (1 ms)
+    √ total 0 con límite 50 = 0 páginas
+    √ total 1 con límite 50 = 1 páginas (1 ms)
+    √ total 50 con límite 50 = 1 páginas (1 ms)
+    √ total 51 con límite 50 = 2 páginas
+    √ total 155 con límite 50 = 4 páginas
+  patronBusqueda (corrige la búsqueda con % y _)
+    √ envuelve el texto en % para buscar en cualquier posición (1 ms)
+    √ escapa los comodines para que se busquen literalmente (1 ms)
+    √ escapa también el propio carácter de escape
+  resumirConteos (estadísticas con una sola consulta)
+    √ suma el total y agrupa por estado, severidad y prioridad (1 ms)
+    √ con la tabla vacía devuelve todo en cero (nunca undefined) (1 ms)
+
+PASS servidor tests/unit/env.test.js
+  Valores por defecto según el entorno
+    √ desarrollo: puerto 3000, CORS local, sin HTTPS forzado y logs en texto (13 ms)
+    √ producción: HTTPS forzado, confía en 1 proxy, logs JSON y ningún origen CORS por defecto (2 ms)
+    √ usa el PORT que entrega el proveedor
+    √ las variables explícitas mandan sobre los valores por defecto (1 ms)
+  Variables obligatorias: el servicio no arranca sin ellas
+    √ falta JWT_SECRET → error que nombra la variable (27 ms)
+    √ JWT_SECRET demasiado corto → error (1 ms)
+    √ producción rechaza el secreto de ejemplo del .env.example (1 ms)
+    √ producción rechaza orígenes CORS que no sean https:// (2 ms)
+    √ motor desconocido → error (2 ms)
+    √ MySQL/PostgreSQL sin host/usuario/clave → el mensaje lista los NOMBRES faltantes, no valores (1 ms)
+    √ el mensaje de error nunca contiene el secreto ni la clave de la base (1 ms)
+  DATABASE_URL (formato de Render, Neon, Supabase…)
+    √ se descompone en las variables DB_* (1 ms)
+    √ decodifica caracteres especiales de la contraseña (1 ms)
+    √ sslmode=require activa DB_SSL
+    √ una URL inválida da un error que NO repite la URL (1 ms)
+    √ un protocolo no soportado se rechaza (2 ms)
+  Advertencias (no detienen el arranque)
+    √ SQLite en producción avisa que los datos pueden perderse (1 ms)
+    √ PostgreSQL en producción no genera advertencias (1 ms)
+
+PASS servidor tests/unit/errorHandler.test.js
+  clasificar(err)
+    √ respeta el código de un AppError (12 ms)
+    √ JSON mal formado -> 400 y cuerpo demasiado grande -> 413 (2 ms)
+    √ validación del ORM -> 400 con detalle por campo (2 ms)
+    √ valor duplicado -> 409 (se evalúa antes que ValidationError, del que hereda) (1 ms)
+    √ base caída -> 503 marcado como interno (1 ms)
+    √ error desconocido -> 500 con mensaje genérico (no filtra el mensaje original) (1 ms)
+
+PASS front tests/unit/frontend/modelo.test.js
+  Defecto 1: total y paginación
+    √ guarda el total REAL de la API, no la cantidad de la página (13 ms)
+    √ pide la página actual junto con los filtros (3 ms)
+    √ irAPagina se mantiene dentro de 1..paginas e indica si hubo cambio (2 ms)
+    √ un filtro nuevo vuelve a la página 1 (2 ms)
+    √ si la página quedó vacía (se eliminó el último registro) salta a la última con datos (2 ms)
+  Defecto 2: el cierre de sesión borra los datos y los filtros
+    √ después de cerrar sesión no queda nada del usuario anterior (2 ms)
+    √ una respuesta de estadísticas que llega tarde no se muestra en la sesión siguiente (1 ms)
+    √ ignora nombres de filtro que no existen (1 ms)
+  Búsquedas concurrentes
+    √ cancela la búsqueda anterior y una respuesta vieja no pisa a la nueva (2 ms)
+  Errores al cargar
+    √ muestra un mensaje si la API falla (1 ms)
+    √ un 401 no muestra error (la aplicación ya vuelve al login)
+  Permisos y edición
+    √ puede() usa los permisos que envió el servidor (1 ms)
+    √ guardar() crea si no hay edición y reemplaza si la hay (1 ms)
+    √ eliminar el incidente que se está editando limpia el formulario
+    √ notifica a los suscriptores qué parte cambió (1 ms)
+
+PASS front tests/unit/frontend/componentes.test.js
+  utils
+    √ esc() neutraliza los 5 caracteres especiales de HTML (7 ms)
+    √ etiqueta() convierte valores de catálogo en texto legible (2 ms)
+    √ opciones() marca la opción seleccionada y agrega la opción vacía (1 ms)
+  Defecto 2: Filtros escapa el texto de búsqueda
+    √ el texto con comillas y etiquetas NO crea elementos nuevos (1 ms)
+    √ conserva los filtros seleccionados (1 ms)
+  Defecto 3: acciones de la tarjeta según permisos
+    √ visor: solo lectura, sin botones ni cambio de estado (23 ms)
+    √ analista: puede cambiar estado y editar, pero NO ve Eliminar (1 ms)
+    √ admin: ve todas las acciones (1 ms)
+    √ escapa los datos del incidente (XSS almacenado) (1 ms)
+    √ lista vacía muestra el mensaje correspondiente
+  Defecto 1: Paginacion
+    √ no se muestra si todo entra en una página
+    √ muestra el total real y deshabilita "Anterior" en la primera página
+    √ deshabilita "Siguiente" en la última página
+  StatsPanel y queryString
+    √ muestra los totales y suma resueltos + cerrados (1 ms)
+    √ queryString omite filtros vacíos y codifica caracteres especiales
+
+PASS servidor tests/integracion/migraciones.test.js
+  Migraciones y esquema
+    √ crea la tabla incidentes con todas las columnas (18 ms)
+    √ crea los índices para filtros por estado y prioridad (5 ms)
+    √ las migraciones son reversibles (down) y se pueden volver a aplicar (up) (31 ms)
+
+PASS servidor tests/unit/limiteLogin.test.js
+  Límite de intentos fallidos de inicio de sesión
+    √ tras superar el máximo responde 429 con Retry-After (113 ms)
+    √ incluso la clave correcta se rechaza mientras dure el bloqueo (31 ms)
+    √ un inicio de sesión correcto reinicia el contador (51 ms)
+    √ pasada la ventana de tiempo se vuelve a permitir (23 ms)
+
+PASS servidor tests/integracion/regresion.test.js
+  Defecto 1: contador y paginación
+    √ la API informa el total real y el número de páginas aunque solo envíe 50 registros (238 ms)
+  Defecto 3: el servidor informa los permisos de cada rol
+    √ GET /api/auth/me para admin devuelve ["leer","escribir","eliminar","verLogs"] (34 ms)
+    √ GET /api/auth/me para analista devuelve ["leer","escribir"] (26 ms)
+    √ GET /api/auth/me para visor devuelve ["leer"] (26 ms)
+    √ el login también devuelve los permisos (el front ya no los adivina) (49 ms)
+  Defecto 4: búsqueda con comodines % y _ en SQLite
+    √ "SRV_WEB" encuentra el texto literal (el _ no es comodín) (36 ms)
+    √ "100%" encuentra el texto literal (el % no es comodín) (31 ms)
+    √ el carácter de escape y las comillas se tratan como texto (sin error ni inyección) (70 ms)
+  Optimización de red e imágenes
+    √ comprime con gzip las respuestas JSON grandes (35 ms)
+    √ no comprime respuestas pequeñas (menos de 1 kB) (28 ms)
+    √ sirve el favicon y el logo optimizado con caché del navegador (35 ms)
+  Optimización de consultas
+    √ las estadísticas se calculan con UNA sola consulta SQL (antes eran 4) (28 ms)
+
+PASS servidor tests/integracion/produccion.test.js
+  Health check
+    √ 200 con servicio, versión del código, entorno y base conectada (160 ms)
+    √ 503 si la base no responde, SIN exponer host, usuario ni mensaje interno (31 ms)
+    √ se puede consultar sin sesión (lo usa el balanceador) (24 ms)
+  Trazabilidad: X-Request-Id
+    √ toda respuesta lleva un identificador único (32 ms)
+    √ se conserva el identificador entrante si tiene formato válido (25 ms)
+    √ se descarta un identificador entrante malicioso o demasiado largo (30 ms)
+    √ el error 500 devuelve como "referencia" el mismo id de la cabecera (une pantalla y log) (38 ms)
+  Logs sin secretos y métricas (solo administradores)
+    √ el log no guarda contraseñas, tokens ni el texto de las búsquedas (93 ms)
+    √ las entradas del log identifican al usuario (id y rol) cuando hubo sesión (45 ms)
+    √ /api/metricas devuelve solicitudes, disponibilidad y latencia p95 (38 ms)
+    √ analista y visor no ven métricas; sin sesión → 401 (48 ms)
+  Registro estructurado (utils/log)
+    √ redacta campos cuyo nombre sugiere un secreto (13 ms)
+    √ describirError devuelve nombre y mensaje (la pila solo fuera de producción) (13 ms)
+  Redirección a HTTPS
+    √ GET por HTTP → 308 hacia la misma ruta en https://, conservando la consulta (25 ms)
+    √ detrás del proxy con X-Forwarded-Proto: https la petición pasa (21 ms)
+    √ POST por HTTP → 403 (nunca se reenvían credenciales por HTTP) (22 ms)
+    √ /api/health queda exento para el health check interno del balanceador (18 ms)
+    √ desactivado (desarrollo): no redirige (19 ms)
+  Persistencia: lo creado sigue ahí tras "reiniciar" la capa de datos
+    √ un incidente creado por la API se lee de nuevo directamente desde la base (35 ms)
+
+PASS servidor tests/integracion/seguridad.test.js
+  Autenticación (JWT)
+    √ 1. Login correcto devuelve un token JWT y no expone el hash de la contraseña (247 ms)
+    √ 2. Login con contraseña incorrecta responde 401 con mensaje genérico (35 ms)
+    √ 3. Login con usuario inexistente responde igual que una clave incorrecta (no revela cuentas) (98 ms)
+    √ 4. La contraseña se guarda como hash bcrypt, nunca en texto plano (17 ms)
+    √ 5. Sin token se bloquea el acceso a incidentes (401) (35 ms)
+    √ 6. Un token alterado o firmado con otra clave es rechazado (401) (39 ms)
+    √ 7. Un token expirado es rechazado (401) (26 ms)
+    √ 8. Una cuenta desactivada pierde el acceso aunque su token siga vigente (401) (33 ms)
+  Autorización por roles
+    √ 9. El visor puede consultar pero NO crear incidentes (403) (64 ms)
+    √ 10. El analista puede crear y modificar, pero NO eliminar (403) (61 ms)
+    √ 11. Solo el administrador puede eliminar y ver los logs del servidor (61 ms)
+    √ 12. Un visor no puede modificar un incidente existente (PUT/PATCH = 403) y no cambia nada (41 ms)
+  Validación y limpieza de entradas
+    √ 13. El login rechaza campos extra (asignación masiva, p. ej. rol: admin) (22 ms)
+    √ 14. Las credenciales se validan antes de consultar la base (400) (25 ms)
+    √ 15. Una inyección SQL en el usuario no provoca acceso (91 ms)
+    √ 16. Las cabeceras CORS solo se permiten para los orígenes configurados (25 ms)
+    √ 17. Un usuario sin sesión no puede ver el perfil; con sesión sí ve sus propios datos (25 ms)
+
+PASS servidor tests/integracion/incidentes.test.js
+  Casos correctos
+    √ GET /api/health confirma conexión con la base (152 ms)
+    √ POST crea y PERSISTE el incidente en la base (201 + Location) (69 ms)
+    √ GET /api/incidentes lista con total y paginación (41 ms)
+    √ filtra por estado (32 ms)
+    √ filtra por prioridad (34 ms)
+    √ combina estado + prioridad (29 ms)
+    √ busca por texto (q) con consulta parametrizada (49 ms)
+    √ pagina y ordena por prioridad (orden lógico, no alfabético) (32 ms)
+    √ GET /:id obtiene un incidente (41 ms)
+    √ PUT reemplaza el incidente completo y lo guarda (42 ms)
+    √ PATCH actualiza solo el estado y la fecha de actualización (63 ms)
+    √ DELETE elimina de la base (204) y luego responde 404 (44 ms)
+    √ GET /stats calcula totales con GROUP BY (27 ms)
+    √ GET /catalogos incluye prioridades (24 ms)
+  Casos de error y validaciones
+    √ 400 si el body tiene campos inválidos (con detalle por campo) (24 ms)
+    √ 400 si se intenta asignar campos no permitidos (id, fechas) (20 ms)
+    √ 400 si el JSON está mal formado (16 ms)
+    √ 413 si el cuerpo supera 10 KB (12 ms)
+    √ 400 si :id no es numérico (23 ms)
+    √ 404 si el incidente no existe (GET, PUT, PATCH, DELETE) (42 ms)
+    √ 400 si PATCH llega vacío (21 ms)
+    √ 400 si un filtro tiene un valor fuera de catálogo o no soportado (38 ms)
+    √ 404 para rutas /api inexistentes (15 ms)
+    √ el MODELO rechaza datos inválidos aunque se salte el middleware (2ª capa) (11 ms)
+    √ el errorHandler traduce errores de validación del ORM a 400 (15 ms)
+    √ 503 si la base no está disponible, SIN exponer detalles internos (15 ms)
+    √ 500 genérico ante una excepción no controlada, sin stack ni mensaje interno (16 ms)
+    √ envía cabeceras de seguridad y no revela la tecnología (16 ms)
+
+Test Suites: 12 passed, 12 total
+Tests:       204 passed, 204 total
+Snapshots:   0 total
+Time:        5.999 s, estimated 7 s
+Ran all test suites in 2 projects.

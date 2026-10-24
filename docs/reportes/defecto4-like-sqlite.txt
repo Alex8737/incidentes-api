@@ -1,0 +1,8 @@
+DEFECTO 4 - busqueda con comodines en SQLite v22.22.0 (node:sqlite, SQLite real)
+
+ANTES (patron escapado con \ y sin ESCAPE, como generaba la version original)
+  q=SRV_WEB -> []
+  q=100%    -> []
+DESPUES (patron escapado con ! y ESCAPE '!')
+  q=SRV_WEB -> ["Caída del servidor SRV_WEB_01"]
+  q=100%    -> ["Uso de CPU al 100% en SRV_DB_02"]

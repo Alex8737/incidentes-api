@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------
+#  Blueprint de Render (Infraestructura como código)
+#  Render > New > Blueprint > seleccione este repositorio.
+#  Crea: 1 base PostgreSQL + 1 servicio web Node.js (API + front-end en el mismo dominio HTTPS).
+#  Los valores secretos NO están aquí: los pide Render al crear (sync: false) o los genera.
+# ---------------------------------------------------------------
+databases:
+  - name: incidentes-db
+    databaseName: incidentes
+    user: incidentes_app
+    plan: free            # revise en el panel de Render las condiciones vigentes del plan gratuito
+
+services:
+  - type: web
+    name: incidentes-api
+    runtime: node
+    plan: free            # puede "dormirse" tras inactividad: abra /api/health antes de la defensa
+    buildCommand: npm install
+    startCommand: npm run start:prod   # migra la base, carga cuentas iniciales (una sola vez) y arranca
+    healthCheckPath: /api/health
+    autoDeploy: true      # cada push a la rama principal despliega (proteja la rama y ejecute pruebas antes)
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 20
+      - key: DATABASE_URL
+        fromDatabase:
+          name: incidentes-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true          # Render genera un valor aleatorio largo
+      - key: JWT_EXPIRA
+        value: 8h
+      # Contraseñas de las cuentas iniciales: las escribe usted en el panel (mínimo 10 caracteres)
+      - key: SEED_ADMIN_PASSWORD
+        sync: false
+      - key: SEED_ANALISTA_PASSWORD
+        sync: false
+      - key: SEED_VISOR_PASSWORD
+        sync: false

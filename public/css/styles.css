@@ -1,0 +1,115 @@
+:root {
+  --bg: #0f172a;
+  --surface: #111c33;
+  --surface-2: #17243f;
+  --border: #25365a;
+  --text: #e5ecf7;
+  --muted: #93a3bf;
+  --primary: #3b82f6;
+  --primary-2: #2563eb;
+  --danger: #ef4444;
+  --baja: #22c55e;
+  --media: #eab308;
+  --alta: #f97316;
+  --critica: #ef4444;
+  --radius: 12px;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+h1, h2, h3 { margin: 0; }
+
+.topbar {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 16px 24px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.topbar__brand { display: flex; gap: 12px; align-items: center; }
+.topbar h1 { font-size: 1.25rem; }
+.topbar p { margin: 2px 0 0; color: var(--muted); font-size: .85rem; }
+.logo { font-size: 2rem; }
+.api-status { font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
+.api-status.ok { color: #86efac; }
+.api-status.error { color: #fca5a5; }
+
+.layout { max-width: 1280px; margin: 0 auto; padding: 24px 16px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+.stat__label { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+.stat__value { font-size: 1.8rem; font-weight: 700; margin-top: 4px; }
+
+.columns { display: grid; grid-template-columns: 340px 1fr; gap: 20px; align-items: start; }
+@media (max-width: 900px) { .columns { grid-template-columns: 1fr; } }
+
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+.panel h2 { font-size: 1.05rem; margin-bottom: 14px; }
+.panel__head { display: flex; justify-content: space-between; align-items: center; }
+.badge-count { background: var(--primary); color: #fff; border-radius: 999px; padding: 1px 9px; font-size: .8rem; margin-left: 6px; }
+
+label { display: block; font-size: .82rem; color: var(--muted); margin: 10px 0 4px; }
+input, select, textarea {
+  width: 100%; padding: 9px 10px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--surface-2); color: var(--text); font: inherit;
+}
+textarea { resize: vertical; min-height: 80px; }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--primary); border-color: transparent; }
+.field-error { color: #fca5a5; font-size: .75rem; min-height: 1em; margin-top: 3px; }
+
+.btn { border: 0; border-radius: 8px; padding: 9px 14px; font: inherit; cursor: pointer; font-weight: 600; }
+.btn--primary { background: var(--primary); color: #fff; }
+.btn--primary:hover { background: var(--primary-2); }
+.btn--ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+.btn--danger { background: transparent; color: #fca5a5; border: 1px solid #7f1d1d; }
+.btn--sm { padding: 5px 10px; font-size: .8rem; }
+.btn:disabled { opacity: .6; cursor: wait; }
+.form-actions { display: flex; gap: 8px; margin-top: 16px; }
+
+.filtros { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr auto; gap: 8px; margin-bottom: 14px; align-items: end; }
+.filtros label { margin-top: 0; }
+@media (max-width: 700px) { .filtros { grid-template-columns: 1fr 1fr; } }
+
+.lista { display: grid; gap: 10px; }
+.card {
+  background: var(--surface-2); border: 1px solid var(--border); border-left: 5px solid var(--muted);
+  border-radius: 10px; padding: 14px 16px;
+}
+.card[data-sev="baja"] { border-left-color: var(--baja); }
+.card[data-sev="media"] { border-left-color: var(--media); }
+.card[data-sev="alta"] { border-left-color: var(--alta); }
+.card[data-sev="critica"] { border-left-color: var(--critica); }
+.card__top { display: flex; justify-content: space-between; gap: 10px; align-items: start; }
+.card__title { font-size: 1rem; }
+.card__id { color: var(--muted); font-weight: 400; }
+.card__desc { color: var(--muted); font-size: .9rem; margin: 6px 0 10px; }
+.card__meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: .78rem; color: var(--muted); }
+.card__actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; align-items: center; }
+.card__actions select { width: auto; padding: 5px 8px; font-size: .8rem; }
+
+.tag { padding: 2px 8px; border-radius: 999px; font-size: .74rem; font-weight: 600; background: #1f2d4d; color: var(--text); }
+.tag--baja { background: #14532d; color: #bbf7d0; }
+.tag--media { background: #713f12; color: #fef08a; }
+.tag--alta { background: #7c2d12; color: #fed7aa; }
+.tag--critica { background: #7f1d1d; color: #fecaca; }
+.tag--estado { background: #1e3a8a; color: #bfdbfe; }
+/* Prioridad (Reto 2 ampliado) */
+.tag--prio-baja { background: #1f2937; color: #d1d5db; }
+.tag--prio-media { background: #164e63; color: #a5f3fc; }
+.tag--prio-alta { background: #581c87; color: #e9d5ff; }
+.tag--prio-urgente { background: #be123c; color: #fff1f2; }
+
+.empty, .loading, .error-box { text-align: center; color: var(--muted); padding: 30px 10px; border: 1px dashed var(--border); border-radius: 10px; }
+.error-box { color: #fca5a5; border-color: #7f1d1d; }
+
+.toast {
+  position: fixed; right: 20px; bottom: 20px; max-width: 360px; padding: 12px 16px; border-radius: 10px;
+  background: #1e293b; border: 1px solid var(--border); color: var(--text);
+  opacity: 0; transform: translateY(10px); transition: .25s; pointer-events: none;
+}
+.toast.show { opacity: 1; transform: none; }
+.toast.ok { border-color: #166534; }
+.toast.error { border-color: #991b1b; }
+
+/* Paginación (Reto 3 - U7): la API entrega 50 incidentes por página */
+.paginacion { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+.paginacion:empty { display: none; }
+.paginacion__info { color: var(--muted); font-size: .85rem; }
+.paginacion button[disabled] { opacity: .45; cursor: not-allowed; }

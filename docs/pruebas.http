@@ -1,0 +1,117 @@
+### Pruebas de la API con la extensión "REST Client" de VS Code
+### (clic en "Send Request" sobre cada bloque)
+
+@base = http://localhost:3000/api
+
+### Salud del servicio (incluye estado de la conexión con la base)
+GET {{base}}/health
+
+### Listar todos
+GET {{base}}/incidentes
+
+### Filtrar por estado
+GET {{base}}/incidentes?estado=abierto
+
+### Filtrar por prioridad
+GET {{base}}/incidentes?prioridad=urgente
+
+### Filtrar por estado + prioridad (usa el índice compuesto)
+GET {{base}}/incidentes?estado=abierto&prioridad=alta
+
+### Paginación y orden por prioridad
+GET {{base}}/incidentes?orden=prioridad&dir=desc&limite=2&pagina=1
+
+### Buscar por texto
+GET {{base}}/incidentes?q=phishing
+
+### Obtener uno
+GET {{base}}/incidentes/1
+
+### Estadísticas
+GET {{base}}/incidentes/stats
+
+### Catálogos
+GET {{base}}/incidentes/catalogos
+
+### Crear
+POST {{base}}/incidentes
+Content-Type: application/json
+
+{
+  "titulo": "Escaneo de puertos desde IP externa",
+  "descripcion": "El IDS detectó un escaneo Nmap sobre la DMZ.",
+  "categoria": "acceso_no_autorizado",
+  "severidad": "media",
+  "prioridad": "alta",
+  "reportadoPor": "IDS"
+}
+
+### Crear con datos inválidos (espera 400)
+POST {{base}}/incidentes
+Content-Type: application/json
+
+{
+  "titulo": "abc",
+  "severidad": "extrema"
+}
+
+### Asignación masiva bloqueada (espera 400: id y fechaCreacion no permitidos)
+POST {{base}}/incidentes
+Content-Type: application/json
+
+{
+  "id": 1,
+  "titulo": "Intento de sobrescribir id",
+  "severidad": "baja",
+  "fechaCreacion": "2000-01-01"
+}
+
+### JSON mal formado (espera 400)
+POST {{base}}/incidentes
+Content-Type: application/json
+
+{ "titulo": "incompleto",
+
+### Filtro fuera de catálogo (espera 400)
+GET {{base}}/incidentes?estado=borrado
+
+### Límite de paginación excedido (espera 400)
+GET {{base}}/incidentes?limite=1000
+
+### Intento de inyección SQL en la búsqueda (se trata como texto, 0 resultados)
+GET {{base}}/incidentes?q=' OR 1=1 --
+
+### Reemplazar (PUT)
+PUT {{base}}/incidentes/1
+Content-Type: application/json
+
+{
+  "titulo": "Phishing bancario - campaña contenida",
+  "descripcion": "Se bloqueó el dominio remitente.",
+  "categoria": "phishing",
+  "severidad": "alta",
+  "prioridad": "media",
+  "estado": "resuelto",
+  "reportadoPor": "Mesa de ayuda"
+}
+
+### Actualizar parcialmente (PATCH)
+PATCH {{base}}/incidentes/2
+Content-Type: application/json
+
+{ "estado": "resuelto" }
+
+### Eliminar
+DELETE {{base}}/incidentes/5
+
+### No encontrado (espera 404)
+GET {{base}}/incidentes/999
+
+### Id inválido (espera 400)
+GET {{base}}/incidentes/abc
+
+### Ruta inexistente (espera 404)
+GET {{base}}/no-existe
+
+### Registros del middleware logger
+GET {{base}}/logs

@@ -1,0 +1,5 @@
+ANÁLISIS ESTÁTICO (ESLint)
+Comando: npx eslint . --format stylish
+Fecha: 24/10/2026, 4:24:01 p. m. · Node v24.21.0
+Resultado: SIN ERRORES
+======================================================================

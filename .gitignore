@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+!.env.example
+database/*.sqlite
+database/*.sqlite-journal
+coverage/
+*.log
+.DS_Store
+# Evidencias con datos de la sesión de verificación: se versionan los reportes, no los secretos
+docs/evidencias/*.secreto
