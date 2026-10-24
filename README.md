@@ -7,7 +7,7 @@ front-end en JavaScript puro, **HTTPS, configuración por entorno, logs estructu
 
 | | |
 |---|---|
-| **URL desplegada** | `https://________.onrender.com` ← complete tras el despliegue |
+| **URL desplegada** | https://incidentes-api-unxc.onrender.com |
 | **Salud** | `/api/health` |
 | **Repositorio** | `https://github.com/<usuario>/incidentes-api` (etiqueta `v4.0.0`) |
 
